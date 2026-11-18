@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="2026년 5월 25일 호우 대응에 관한 3개 부처의 가상 보도자료를 검색합니다.">
+  <title>5월 25일 호우 대응 | 부처별 보도자료</title>
+  <link rel="stylesheet" href="./styles.css">
+  <script src="./app.js" defer></script>
+</head>
+<body id="top">
+  <header class="site-header">
+    <div class="wrap header-inner">
+      <a class="brand" href="#top">
+        <span class="brand-symbol" aria-hidden="true"><i></i><i></i><i></i></span>
+        <span>호우 대응 자료실</span>
+      </a>
+      <a class="header-link" href="#press">보도자료 검색 <span aria-hidden="true">↓</span></a>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" aria-labelledby="hero-title">
+      <figure class="hero-photo">
+        <img
+          src="https://thumb.wikimedia.org/wikipedia/commons/thumb/d/da/Rain_and_Night_in_Yanghwa-ro.jpg/1280px-Rain_and_Night_in_Yanghwa-ro.jpg?utm_campaign=index&amp;utm_content=thumbnail&amp;utm_source=commons.wikimedia.org"
+          data-fallback="./assets/yanghwa-rain.jpg"
+          alt="빗물이 고인 서울 양화로의 야경"
+          width="1280" height="853">
+        <figcaption>
+          자료 사진 · <a href="https://commons.wikimedia.org/wiki/File:Rain_and_Night_in_Yanghwa-ro.jpg">서울 양화로, 2020년 8월 10일</a>
+          <span>· Tony / <a href="https://creativecommons.org/licenses/by/2.0/">CC BY 2.0</a> · 화면에 맞춰 자름</span>
+        </figcaption>
+      </figure>
+      <div class="wrap hero-copy">
+        <p class="hero-date"><time datetime="2026-05-25">2026. 05. 25.</time><span>가상 보도자료</span></p>
+        <h1 id="hero-title">5월 25일 호우 대응<br><span>부처별 보도자료</span></h1>
+        <p class="hero-description">행정안전부·기상청·경찰청의 발표 내용을 확인하세요.</p>
+      </div>
+    </section>
+
+    <section class="wrap press" id="press" aria-labelledby="press-title">
+      <div class="press-heading">
+        <h2 id="press-title">보도자료 검색</h2>
+        <p id="result-count" class="result-count" role="status" aria-atomic="true">불러오는 중</p>
+      </div>
+      <div class="search" role="search" aria-label="보도자료">
+        <span class="search-icon" aria-hidden="true"></span>
+        <label class="sr-only" for="keyword">부처명 또는 본문 키워드</label>
+        <input type="search" id="keyword" placeholder="부처명 또는 본문 키워드를 입력하세요" autocomplete="off" aria-controls="article-list" disabled>
+        <button class="clear-search" id="clear-search" type="button" hidden>지우기</button>
+      </div>
+      <div class="card-grid" id="article-list" aria-busy="true"></div>
+      <p class="notice" id="notice" hidden></p>
+      <noscript><p class="notice">보도자료를 검색하려면 브라우저에서 JavaScript를 켜 주세요.</p></noscript>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap footer-inner">
+      <span>AI 블루 인증평가 · 가상 보도자료</span>
+      <a href="./보도자료데이터.json">원본 JSON <span aria-hidden="true">↗</span></a>
+    </div>
+  </footer>
+
+  <template id="article-template">
+    <article class="press-card">
+      <div class="card-content">
+        <p class="department"></p>
+        <h3></h3>
+        <p class="summary"></p>
+      </div>
+      <details class="full-article">
+        <summary>본문 보기</summary>
+        <div class="body-text"></div>
+      </details>
+    </article>
+  </template>
+</body>
+</html>
